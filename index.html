@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:  "Lucida Console", Monaco, monospace;
+    font-size: 17px;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: aqua;
+    width: 100%;
+    padding: 20px;
+}
+
+#myBtn {
+    width: 100px;
+	height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: rgba(0, 0, 0, 0.1);
+    color: pink;
+    cursor: pointer;
+    }
+#text {
+	color: purple;
+	font-family: Arial;
+	}  
+
+#myBtn:hover {
+    color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="rain.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1 id="text">[R.E.D.O.C.]</h1>
+  <p>Спільнота, що допомагає глибше зрозуміти та освоїти початківцю світ ІТ Технологій, програмування, WEB-дизайну та багато іншого по темі.</p>
+  <button id="myBtn"><a href="main.html"> ПЕРЕЙТИ</a></button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
